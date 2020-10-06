@@ -10,6 +10,7 @@ import queryString from 'query-string'
 import auth from './utils/auth';
 import Axios from 'axios';
 import Mails from './components/mails';
+import Files from './components/files';
 
 class App extends Component {
   constructor(props) {
@@ -51,6 +52,7 @@ class App extends Component {
             <Route exact path="/signin" name="SignIn Page" component={SignIn} />
             <ProtectedRoute exact path="/" name="Home" component={DefaultLayout} />
             <ProtectedRoute exact path="/mails" name="Mails" component={Mails} />
+            <ProtectedRoute exact path="/files" name="Files" component={Files} />
           </Switch>
         </BrowserRouter>
       </div>
